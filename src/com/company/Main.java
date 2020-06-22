@@ -33,6 +33,7 @@ public class Main {
             System.out.println(newArray[i]);
         }
     }
+
     public static void printMinValueInArray(int[] newArray) {
         int minValue = newArray[0];
         for (int i = 0; i < newArray.length; i++) {
@@ -42,6 +43,7 @@ public class Main {
         }
         System.out.println("min value = " + minValue);
     }
+
     public static void printMaxValueInArray(int[] newArray) {
         int maxValue = newArray[0];
         for (int j = 0; j < newArray.length; j++) {
@@ -51,17 +53,20 @@ public class Main {
         }
         System.out.println("max value = " + maxValue);
     }
+
     public static void sortArrayFromMinToMax(int[] newArray) {
         Arrays.sort(newArray);
         for (int i = 0; i < newArray.length; i++) {
             System.out.println(newArray[i] + " ");
         }
     }
+
     public static void sortArrayFromMaxToMin (int[] newArray) {
         for (int j = newArray.length - 1; j >= 0; j--) {
             System.out.println(" " + newArray[j]);
         }
     }
+
     public static void printSumOfArray(int[] newArray) {
         int sum = 0;
         for (int i = 0; i < newArray.length; i++) {
@@ -69,6 +74,7 @@ public class Main {
         }
         System.out.println(sum);
     }
+
     public static void printSquareValuesOfElementsInArray(int[] newArray) {
         for (int i = 0; i < newArray.length; i++) {
             newArray[i] *= newArray[i];
@@ -82,6 +88,7 @@ public class Main {
         }
         System.out.println();
     }
+
     public static void replaceDublicates(int[] massive) {
         for (int i = 0; i < massive.length; i++) {
             for (int j = i + 1; j < massive.length; j++) {
