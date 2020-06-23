@@ -26,11 +26,12 @@ public class Main {
         replaceDublicates(massive);
     }
 
+    public static final int MAX_ARRAY_RANGE = 100;
+
     private static void setRandomIntValuesInArrays(int[] newArray) {
         Random random = new Random();
-        final int max_array_range = 100;
         for (int i = 0; i < newArray.length; i++) {
-            newArray[i] = random.nextInt(max_array_range);
+            newArray[i] = random.nextInt(MAX_ARRAY_RANGE);
             System.out.println(newArray[i]);
         }
     }
