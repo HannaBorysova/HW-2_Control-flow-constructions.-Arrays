@@ -1,4 +1,4 @@
-package com.company;
+package main.java.com.hw2;
 
 import java.util.Arrays;
 import java.util.Random;
@@ -26,70 +26,71 @@ public class Main {
         replaceDublicates(massive);
     }
 
-    public static void setRandomIntValuesInArrays(int[] newArray) {
+    private static void setRandomIntValuesInArrays(int[] newArray) {
         Random random = new Random();
+        final int max_array_range = 100;
         for (int i = 0; i < newArray.length; i++) {
-            newArray[i] = random.nextInt(100);
+            newArray[i] = random.nextInt(max_array_range);
             System.out.println(newArray[i]);
         }
     }
 
-    public static void printMinValueInArray(int[] newArray) {
+    private static void printMinValueInArray(int[] newArray) {
         int minValue = newArray[0];
-        for (int i = 0; i < newArray.length; i++) {
-            if (newArray[i] < minValue) {
-                minValue = newArray[i];
+        for (int i : newArray) {
+            if (i < minValue) {
+                minValue = i;
             }
         }
         System.out.println("min value = " + minValue);
     }
 
-    public static void printMaxValueInArray(int[] newArray) {
+    private static void printMaxValueInArray(int[] newArray) {
         int maxValue = newArray[0];
-        for (int j = 0; j < newArray.length; j++) {
-            if (newArray[j] > maxValue) {
-                maxValue = newArray[j];
+        for (int j : newArray) {
+            if (j > maxValue) {
+                maxValue = j;
             }
         }
         System.out.println("max value = " + maxValue);
     }
 
-    public static void sortArrayFromMinToMax(int[] newArray) {
+    private static void sortArrayFromMinToMax(int[] newArray) {
         Arrays.sort(newArray);
         for (int i = 0; i < newArray.length; i++) {
             System.out.println(newArray[i] + " ");
         }
     }
 
-    public static void sortArrayFromMaxToMin (int[] newArray) {
+    private static void sortArrayFromMaxToMin(int[] newArray) {
         for (int j = newArray.length - 1; j >= 0; j--) {
             System.out.println(" " + newArray[j]);
         }
     }
 
-    public static void printSumOfArray(int[] newArray) {
+    private static void printSumOfArray(int[] newArray) {
         int sum = 0;
-        for (int i = 0; i < newArray.length; i++) {
-            sum = sum + newArray[i];
+        for (int i : newArray) {
+            sum = sum + i;
         }
         System.out.println(sum);
     }
 
-    public static void printSquareValuesOfElementsInArray(int[] newArray) {
+    private static void printSquareValuesOfElementsInArray(int[] newArray) {
         for (int i = 0; i < newArray.length; i++) {
             newArray[i] *= newArray[i];
             System.out.println(" " + newArray[i]);
         }
     }
 
-    public static void printDiagonalElementsOfMatrix(String[][] matrix) {
+    private static void printDiagonalElementsOfMatrix(String[][] matrix) {
         for (int i = 0; i < matrix.length; i++) {
             System.out.print(matrix[i][i] + " ");
         }
         System.out.println();
     }
 
-    public static void replaceDublicates(int[] massive) {
+    private static void replaceDublicates(int[] massive) {
         for (int i = 0; i < massive.length; i++) {
             for (int j = i + 1; j < massive.length; j++) {
                 if (massive[i] == massive[j]) {
