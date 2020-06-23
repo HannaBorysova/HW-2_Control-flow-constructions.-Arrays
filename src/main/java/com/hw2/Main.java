@@ -4,6 +4,8 @@ import java.util.Arrays;
 import java.util.Random;
 
 public class Main {
+    public static final int MAX_ARRAY_RANGE = 100;
+
     public static void main(String[] args) {
         int[] newArray = new int[20];
 
@@ -25,8 +27,6 @@ public class Main {
 
         replaceDublicates(massive);
     }
-
-    public static final int MAX_ARRAY_RANGE = 100;
 
     private static void setRandomIntValuesInArrays(int[] newArray) {
         Random random = new Random();
